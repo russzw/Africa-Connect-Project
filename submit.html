@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Africa Connect Submit</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- modify this form HTML and place wherever you want your form -->
+  <section>
+    <div class="container">
+      <form action="https://formspree.io/f/xbjqekrp" method="POST" id="my-form"
+      enctype="multipart/form-data">
+  
+        <div class="form-group">
+          <label for="firstName">Name</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+  
+      <!--  <div class="form-group">
+          <label for="email">Images or Files</label>
+          <input type="file" id="upload" name="upload">
+        </div> -->
+  
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        </div>
+  
+        <button type="submit">Submit</button>
+        
+      </form>
+        <button type="reset" onclick="document.location='index.html'">Back</button>
+    </div>
+    <div id="status"></div>
+  </section>
+
+<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+/* paste this line in verbatim */
+window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+/* customize formbutton below*/     
+formbutton("create", {
+  action: "https://formspree.io/f/xbjqekrp",
+  title: "How can we help?",
+  fields: [
+    { 
+      type: "email", 
+      label: "Email:", 
+      name: "email",
+      required: true,
+      placeholder: "your@email.com"
+    },
+    {
+      type: "textarea",
+      label: "Message:",
+      name: "message",
+      placeholder: "What's on your mind?",
+    },
+    { type: "submit" }      
+  ],
+  styles: {
+    title: {
+      backgroundColor: "gray"
+    },
+    button: {
+      backgroundColor: "gray"
+    }
+  }
+});
+</script>
+
+<!-- <script src="js/submit.js"></script> !-->
+
+</body>
+</html>
